@@ -1,0 +1,40 @@
+.Form {
+	padding: 2rem;
+	margin: 2rem auto;
+	font-size: 1.6rem;
+	position: relative;
+	max-width: 50%;
+	border-bottom: 1px solid teal;
+}
+
+.Input {
+	padding: 1rem 2rem;
+	padding-left: 1rem;
+	border: none;
+	border-radius: 1px;
+	border-bottom: 1px solid teal;
+	display: inline-block;
+	width: 50%;
+}
+
+.Input::placeholder {
+	color: teal;
+	font-size: initial;
+	font-family: inherit;
+}
+
+.Label {
+	position: absolute;
+	left: 30%;
+	z-index: -1;
+}
+
+.Button {
+	background-color: teal;
+	color: #fff;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: inherit;
+}
