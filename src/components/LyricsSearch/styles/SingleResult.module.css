@@ -1,0 +1,36 @@
+.Result {
+	border: 1px solid teal;
+	border-radius: 3px;
+	text-align: left;
+	padding: 1.5rem;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+}
+
+.Result:hover {
+	box-shadow: 2px 5px 2rem rgba(0, 0, 0, 0.2);
+}
+
+.Detail {
+	margin-right: auto;
+}
+
+.Detail h3 {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+
+.Detail p {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.Result img {
+	height: 4.5rem;
+	border-radius: 100%;
+	margin-right: 3rem;
+}
