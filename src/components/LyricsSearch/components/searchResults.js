@@ -1,7 +1,7 @@
 import React from 'react';
-import SingleResult from './singleResult';
+import SingleResult from '../../../components/LyricsSearch/components/singleResult';
 
-import classes from '../styles/SearchResults.module.css';
+import classes from '../../../components/LyricsSearch/styles/SearchResults.module.css';
 
 const searchResults = props => {
 	// if (props === null) return;

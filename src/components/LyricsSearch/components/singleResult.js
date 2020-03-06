@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchResult from '../styles/SingleResult.module.css';
-import Search from '../styles/SearchBar.module.css';
+import SearchResult from '../../../components/LyricsSearch/styles/SingleResult.module.css';
+import Search from '../../../components/LyricsSearch/styles/SearchBar.module.css';
 
 const singleResult = props => {
 	const { artist, title, img, getLyric } = props;
