@@ -1,0 +1,11 @@
+.Container {
+	max-width: 50%;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.Container {
+		max-width: 90%;
+	}
+}
