@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleResult from '../../../components/LyricsSearch/components/singleResult';
+import SingleResult from './singleResult';
 
 import classes from '../../../components/LyricsSearch/styles/SearchResults.module.css';
 
