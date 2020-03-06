@@ -1,10 +1,19 @@
-import React from 'react';
-import SearchBar from '../styles/SearchBar.module.css';
+import React, { useRef } from 'react';
+import Search from '../styles/SearchBar.module.css';
 
-const searchBar = () => {
+const SearchBar = props => {
+	const searchRef = useRef(null);
+
 	return (
-		<form className={SearchBar.Form}>
-			<label htmlFor="lyrics-search" className={SearchBar.Label}>
+		<form
+			className={Search.Form}
+			onSubmit={event => {
+				event.preventDefault();
+				props.search(searchRef.current.value);
+				searchRef.current.value = '';
+			}}
+		>
+			<label htmlFor="lyrics-search" className={Search.Label}>
 				Search for songs, artist
 			</label>
 			<input
@@ -12,13 +21,14 @@ const searchBar = () => {
 				placeholder="Search for songs, artist"
 				name="lyrics-search"
 				inputMode="search"
-				className={SearchBar.Input}
+				className={Search.Input}
+				ref={searchRef}
 			/>
-			<button type="submit" className={SearchBar.Button}>
+			<button type="submit" className={Search.Button}>
 				Search
 			</button>
 		</form>
 	);
 };
 
-export default searchBar;
+export default SearchBar;

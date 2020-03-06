@@ -3,11 +3,21 @@ import SingleResult from './singleResult';
 
 import classes from '../styles/SearchResults.module.css';
 
-const searchResults = () => {
+const searchResults = props => {
+	// if (props === null) return;
 	return (
 		<section className={classes.Container}>
-			<SingleResult />
-			<SingleResult />
+			{props.results === null
+				? null
+				: props.results.map(result => (
+						<SingleResult
+							artist={result.artist.name}
+							title={result.title}
+							img={result.album.cover}
+							key={result.id}
+							getLyric={props.getLyric}
+						/>
+				  ))}
 		</section>
 	);
 };
