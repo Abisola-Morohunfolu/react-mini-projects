@@ -1,0 +1,54 @@
+.Operator {
+	grid-column: 4 / 5;
+	color: rgb(132, 132, 243) !important;
+	border-left: 1px solid rgb(132, 132, 243) !important;
+}
+
+.Number_9 {
+	grid-area: num9;
+}
+
+.Number_8 {
+	grid-area: num8;
+}
+
+.Number_7 {
+	grid-area: num7;
+}
+
+.Number_6 {
+	grid-area: num6;
+}
+
+.Number_5 {
+	grid-area: num5;
+}
+
+.Number_4 {
+	grid-area: num4;
+}
+
+.Number_3 {
+	grid-area: num3;
+}
+
+.Number_2 {
+	grid-area: num2;
+}
+
+.Number_1 {
+	grid-area: num1;
+}
+
+.Number_0 {
+	grid-area: num0;
+}
+
+.Number_dot {
+	grid-area: numdot;
+}
+
+.Eval {
+	grid-area: eval;
+	background-color: rgb(132, 132, 243) !important;
+}

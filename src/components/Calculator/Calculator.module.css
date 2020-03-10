@@ -1,0 +1,77 @@
+.Wrapper {
+	display: grid;
+	margin: 4rem auto;
+	max-width: 20%;
+	grid-template-rows: 5rem min-content min-content;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.Result {
+	background-color: #000;
+	color: rgb(132, 132, 243);
+	font-size: 1.8rem;
+	border: 1px solid #000;
+	grid-row: 1 / 2;
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: 1rem;
+}
+
+.Buttons {
+	background-color: #000;
+	grid-row: 3 / 4;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+		'num7 num8 num9 op-1'
+		'num6 num5 num4 op-2'
+		'num3 num2 num1 op-3'
+		'num0 numdot . op-4'
+		'eval eval eval eval';
+}
+
+.Buttons button,
+.ClearBtn button {
+	background-color: transparent;
+	font-size: 2.4rem;
+	border: none;
+	outline: none;
+	color: #ccc;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.ClearBtn {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: 1 / -1;
+	background-color: rgb(132, 132, 243);
+	color: #fff;
+}
+
+.ClearBtn .Clear {
+	grid-column: 1 / span 2;
+	grid-row: 1 / 2;
+	color: #fff;
+	border-right: 1px solid #fff;
+	font-size: 1.6rem;
+}
+
+.ClearBtn .Delete {
+	grid-column: 3 / span 2;
+	grid-row: 1 / 2;
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.Wrapper {
+		width: 100%;
+		grid-template-columns: repeat(4, minmax(5rem, min-content));
+		padding: 1rem;
+	}
+}
