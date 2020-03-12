@@ -7,6 +7,9 @@ const Home = () => {
 			Welcome
 			<Link to="/lyrics-search">lyrics</Link>
 			<Link to="/calculator">calculator</Link>
+			<div>
+				<Link to="/music-player">Music Player</Link>
+			</div>
 		</div>
 	);
 };
