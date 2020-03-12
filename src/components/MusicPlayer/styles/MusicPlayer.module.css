@@ -1,0 +1,78 @@
+.MusicPlayer {
+	border-bottom: 1px solid #aaa;
+	margin-bottom: 1rem;
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+}
+
+.Image {
+	height: 100%;
+	width: 50%;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.Image img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.Player {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3rem;
+}
+
+.Info {
+	text-align: left;
+	margin-bottom: 5rem;
+}
+
+.Info .Title {
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.Info .Artist {
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+.Progress {
+	width: 100%;
+	height: 2px;
+	background-color: #eee;
+	position: relative;
+	cursor: pointer;
+}
+
+.Progress .Bar {
+	width: 70%;
+	display: inline-block;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background-color: #ccc;
+}
+
+.Buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.MusicPlayer {
+		flex-direction: column;
+		width: 100%;
+	}
+}

@@ -1,0 +1,32 @@
+.PlaylistItem {
+	display: flex;
+	height: 4rem;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	transition: all 0.4s ease;
+	padding: 5px;
+	flex-wrap: wrap;
+}
+
+.PlaylistItem:hover {
+	box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.PlaylistItem img {
+	display: block;
+	height: 90%;
+	margin-left: 2rem;
+}
+
+.PlaylistItem p {
+	font-size: 1.8rem;
+	margin-left: 1rem;
+	font-weight: 700;
+}
+
+.PlaylistItem p em {
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: gray;
+}
