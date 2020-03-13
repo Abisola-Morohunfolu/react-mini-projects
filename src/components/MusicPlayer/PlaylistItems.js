@@ -13,6 +13,7 @@ const playlistItems = props => {
 						image={song.cover}
 						play={() => props.select(song.id)}
 						key={song.id}
+						active={props.active !== null && props.active === song.id ? true : false}
 					/>
 				);
 			})}
