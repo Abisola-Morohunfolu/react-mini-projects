@@ -8,6 +8,7 @@ const playlistItem = props => {
 			<p>
 				{props.title} <em>- {props.artist}</em>
 			</p>
+			{props.active && <p className={classes.Playing}>Now Playing</p>}
 		</li>
 	);
 };

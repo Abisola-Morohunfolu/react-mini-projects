@@ -28,5 +28,11 @@
 .PlaylistItem p em {
 	font-weight: 300;
 	font-size: 1.6rem;
-	color: gray;
+	color: teal;
+}
+
+.PlaylistItem .Playing {
+	color: teal;
+	font-size: 1.2rem;
+	margin-left: auto;
 }
