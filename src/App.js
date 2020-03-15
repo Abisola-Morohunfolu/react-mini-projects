@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import Home from './components/Home/Home';
 import LyricsSearchApp from './components/LyricsSearch/LyricsSearchApp';
 import CalculatorApp from './components/Calculator/CalculatorApp';
 import MusicPlayerApp from './components/MusicPlayer/MusicPlayerApp';
