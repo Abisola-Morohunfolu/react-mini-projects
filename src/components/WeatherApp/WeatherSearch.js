@@ -40,6 +40,7 @@ const WeatherSearch = props => {
 				className={classes.WeatherSearchForm}
 				onSubmit={event => {
 					event.preventDefault();
+					weatherSearchRef.current.blur();
 					props.search(weatherSearchRef.current.value);
 					weatherSearchRef.current.value = '';
 				}}
