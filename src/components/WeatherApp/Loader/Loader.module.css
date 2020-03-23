@@ -1,0 +1,55 @@
+.LoadingContainer {
+	height: 100%;
+	background-color: rgba(1, 1, 65, 0.8);
+	z-index: 1000;
+	transition: all 0.8s;
+}
+
+.Loader {
+	width: 70px;
+	height: 70px;
+	background: #ffff32;
+	border-radius: 50%;
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 35px);
+}
+
+.Loader:after,
+.Loader:before {
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	background: #fafafa;
+	display: block;
+	width: 50px;
+	height: 40px;
+	border-radius: 50%;
+	animation: cloud1 2.5s ease-in-out infinite alternate;
+	box-shadow: 20px -15px 0 #fafafa, 40px 10px 0 #fafafa, 55px -15px 0 #fafafa, 75px 0px 0 #fafafa;
+}
+
+.Loader:before {
+	left: -80px;
+	top: 0;
+	animation-name: cloud2;
+}
+
+/* ANIMATIONS */
+@keyframes cloud1 {
+	from {
+		margin-left: 0;
+	}
+	to {
+		margin-left: 50px;
+	}
+}
+@keyframes cloud2 {
+	from {
+		margin-left: 0;
+	}
+	to {
+		margin-left: -50px;
+	}
+}
