@@ -6,5 +6,11 @@ export const appsData = [
 		name: 'Lyrics Search',
 		route: '/lyrics-search',
 		img: 'assets/images/lyricssearch.png'
+	},
+	{
+		id: 3,
+		name: 'Weather App',
+		route: '/weather',
+		img: 'assets/images/weatherapp.png'
 	}
 ];
