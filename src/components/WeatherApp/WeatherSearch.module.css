@@ -5,6 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+
 	/* overflow: hidden; */
 }
 
@@ -22,6 +23,7 @@
 	padding: 3rem;
 	z-index: 1000;
 	opacity: 0;
+	flex-wrap: wrap;
 }
 
 .WeatherSearch {
@@ -59,4 +61,14 @@
 	height: 100%;
 	object-fit: cover;
 	overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.WeatherSearchSection {
+		height: 30vh;
+	}
+
+	.ImageBox {
+		height: 30vh;
+	}
 }

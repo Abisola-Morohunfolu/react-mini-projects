@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Button from '../UI/Buttons/Button';
 import classes from './WeatherSearch.module.css';
 import gsap from 'gsap';
@@ -7,6 +7,8 @@ const tl = gsap.timeline();
 
 const WeatherSearch = props => {
 	const weatherSearchRef = useRef(null);
+
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		tl.from('div img', {
@@ -30,6 +32,18 @@ const WeatherSearch = props => {
 			});
 	}, []);
 
+	const submitForm = query => {
+		if (query === '' || query === ' ') {
+			return setError(
+				<p style={{ color: '#fff', fontWeight: 'bold', flex: '0 0 100%', marginTop: '2rem' }}>
+					Please enter location to search for
+				</p>
+			);
+		}
+		setError(null);
+		props.search(query);
+	};
+
 	return (
 		<section className={classes.WeatherSearchSection}>
 			<div className={classes.ImageBox}>
@@ -41,7 +55,8 @@ const WeatherSearch = props => {
 				onSubmit={event => {
 					event.preventDefault();
 					weatherSearchRef.current.blur();
-					props.search(weatherSearchRef.current.value);
+					// props.search(weatherSearchRef.current.value);
+					submitForm(weatherSearchRef.current.value);
 					weatherSearchRef.current.value = '';
 				}}
 			>
@@ -55,7 +70,7 @@ const WeatherSearch = props => {
 					ref={weatherSearchRef}
 				/>
 				<Button type="search">Go!</Button>
-				{props.error && <p>Please enter a city to search for</p>}
+				{error}
 			</form>
 		</section>
 	);

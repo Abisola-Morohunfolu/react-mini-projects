@@ -3,16 +3,26 @@ import classes from './WeatherInfo.module.css';
 import Loader from './Loader/Loader';
 
 const weatherInfo = props => {
-	if (props.data === null && props.loading === false) {
-		return null;
-	}
-
 	if (props.loading === true) {
 		return (
 			<section className={classes.WeatherInfo}>
 				<Loader />
 			</section>
 		);
+	}
+
+	if (props.error !== null) {
+		return (
+			<section className={classes.WeatherInfo}>
+				<h4 className={classes.WeatherInfoHeading}>
+					<span>Something went wrong!</span>
+				</h4>
+			</section>
+		);
+	}
+
+	if (props.data === null && props.loading === false) {
+		return null;
 	}
 
 	return (

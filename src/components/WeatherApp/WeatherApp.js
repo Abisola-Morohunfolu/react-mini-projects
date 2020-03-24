@@ -18,9 +18,6 @@ const WeatherApp = () => {
 	useEffect(() => {
 		if (weatherInfo.isLoading) {
 			tl.to('.WeatherSearch_WeatherSearchSection__1NHTN', {
-				y: '-15%',
-				duration: 1
-			}).to('.WeatherSearch_WeatherSearchSection__1NHTN', {
 				css: { height: '30vh' },
 				duration: 1,
 				delay: -1
@@ -70,11 +67,21 @@ const WeatherApp = () => {
 						searchInput: '',
 						weatherData: data.data
 					});
+				})
+				.catch(error => {
+					setWeatherInfo({
+						...weatherInfo,
+						weatherData: null,
+						error: error,
+						isLoading: false
+					});
 				});
 		} catch (error) {
 			setWeatherInfo({
 				...weatherInfo,
-				error: error
+				weatherData: null,
+				error: error,
+				isLoading: false
 			});
 		}
 	};
@@ -85,6 +92,7 @@ const WeatherApp = () => {
 			<WeatherInfo
 				loading={weatherInfo.isLoading}
 				data={weatherInfo.weatherData === null ? null : weatherInfo.weatherData[0]}
+				error={weatherInfo.error}
 			/>
 		</div>
 	);
