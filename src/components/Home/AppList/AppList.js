@@ -5,11 +5,19 @@ import classes from './AppList.module.css';
 
 const AppList = () => {
 	return (
-		<main className={classes.Wrapper}>
-			{appsData.map(app => {
-				return <ListItem key={app.id} link={app.route} image={app.img} title={app.name} />;
+		<section className={classes.Wrapper}>
+			{appsData.map((app) => {
+				return (
+					<ListItem
+						key={app.id}
+						link={app.route}
+						image={app.img}
+						title={app.name}
+						description={app.description}
+					/>
+				);
 			})}
-		</main>
+		</section>
 	);
 };
 

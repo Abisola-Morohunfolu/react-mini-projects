@@ -1,7 +1,3 @@
-.App {
-	text-align: center;
-}
-
 *,
 *::after,
 *::before {
@@ -13,8 +9,6 @@
 html {
 	font-size: 62.5%;
 }
-
-
 
 @media only screen and (max-width: 37.5em) {
 	html {

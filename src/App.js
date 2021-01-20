@@ -9,15 +9,13 @@ import WeatherApp from './components/WeatherApp/WeatherApp';
 
 function App() {
 	return (
-		<div className="App">
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route exact path="/lyrics-search" component={LyricsSearchApp} />
-				<Route exact path="/calculator" component={CalculatorApp} />
-				<Route exact path="/music-player" component={MusicPlayerApp} />
-				<Route exact path="/weather" component={WeatherApp} />
-			</Switch>
-		</div>
+		<Switch>
+			<Route exact path="/" component={Home} />
+			<Route exact path="/lyrics-search" component={LyricsSearchApp} />
+			<Route exact path="/calculator" component={CalculatorApp} />
+			<Route exact path="/music-player" component={MusicPlayerApp} />
+			<Route exact path="/weather" component={WeatherApp} />
+		</Switch>
 	);
 }
 
