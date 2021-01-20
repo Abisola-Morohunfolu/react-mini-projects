@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar';
-import SearchResults from './components/searchResults';
+import SearchBar from './LyricsSearchComponents/SearchBar';
+import SearchResults from './LyricsSearchComponents/searchResults';
 import { apiUrl } from './baseUrl';
-import DisplayLyrics from './components/DisplayLyrics';
+import DisplayLyrics from './LyricsSearchComponents/DisplayLyrics';
 
 class LyricsSearchApp extends Component {
 	state = {

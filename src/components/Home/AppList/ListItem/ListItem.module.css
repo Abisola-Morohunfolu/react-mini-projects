@@ -1,0 +1,71 @@
+.ListItem {
+	position: relative;
+	overflow: hidden;
+	height: 45vh;
+}
+
+.AppImage {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 0.5s ease-in;
+}
+
+.ListItem a {
+	text-decoration: none;
+	color: currentColor;
+	cursor: grab;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.ListItem .Detail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-color: var(--color-yellow);
+	z-index: 3;
+	transition: all 0.8s ease;
+}
+
+.ListItem:hover .Detail {
+	opacity: 0;
+}
+
+.ListItem:hover .AppImage {
+	transform: scale(1.05);
+}
+
+.Title {
+	color: #000;
+	font-size: 2.4rem;
+}
+
+.Description {
+	font-family: var(--font-secondary);
+	font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.ListItem {
+		height: 35vh;
+	}
+}

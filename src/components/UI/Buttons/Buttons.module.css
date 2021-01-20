@@ -1,0 +1,30 @@
+.Button {
+	background-color: none;
+	font-size: 1.5rem;
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 0.8rem 1.2rem;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.Demo {
+	background-color: darkcyan;
+}
+
+.Demo:hover {
+	background-color: rgb(0, 92, 92);
+}
+
+.Search {
+	background-color: rgb(2, 48, 133);
+	border-radius: 8px;
+}
+
+.Search:hover {
+	background-color: rgb(1, 38, 105);
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+}

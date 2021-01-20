@@ -1,0 +1,32 @@
+.Wrapper {
+	display: grid;
+	max-width: 85vw;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: 8rem 2rem;
+	margin-top: 15rem;
+}
+
+.Wrapper div:nth-child(1),
+.Wrapper div:nth-child(5) {
+	grid-column: 1 / span 3;
+}
+
+.Wrapper div:nth-child(2) {
+	grid-column: 5 / span 3;
+}
+
+.Wrapper div:nth-child(3) {
+	grid-column: 2 / span 3;
+}
+
+.Wrapper div:nth-child(4) {
+	grid-column: 6 / span 3;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.Wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+		grid-gap: 0;
+		margin-top: 8rem;
+	}
+}

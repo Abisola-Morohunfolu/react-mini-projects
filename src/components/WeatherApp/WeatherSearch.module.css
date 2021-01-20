@@ -1,0 +1,74 @@
+.WeatherSearchSection {
+	background-color: rgb(1, 1, 65);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+
+	/* overflow: hidden; */
+}
+
+.WeatherSearchSection h2 {
+	color: #fff;
+	padding-top: 3rem;
+	z-index: 1000;
+	opacity: 0;
+}
+
+.WeatherSearchForm {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	padding: 3rem;
+	z-index: 1000;
+	opacity: 0;
+	flex-wrap: wrap;
+}
+
+.WeatherSearch {
+	outline: none;
+	border-radius: 8px;
+	border: none;
+	padding: 1rem;
+	margin-right: 1rem;
+	font-family: inherit;
+	color: rgb(2, 48, 133);
+	width: 50%;
+	transition: all 0.6s ease-in;
+}
+
+.WeatherSearch:focus {
+	box-shadow: 5px 1rem 3rem rgba(0, 0, 0, 0.8);
+}
+
+.WeatherSearch::-webkit-input-placeholder {
+	color: inherit;
+	font-weight: 700;
+}
+
+.ImageBox {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.ImageBox img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.WeatherSearchSection {
+		height: 30vh;
+	}
+
+	.ImageBox {
+		height: 30vh;
+	}
+}

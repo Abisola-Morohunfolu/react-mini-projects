@@ -1,0 +1,71 @@
+.Header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.HeaderText {
+	flex: 1.5;
+	margin-left: 8rem;
+}
+
+.IconsContainer {
+	background-color: var(--color-blue);
+	height: 100%;
+	width: 100%;
+	flex: 1;
+}
+
+.TextHeading {
+	font-size: 11rem;
+	width: 40%;
+	line-height: 10rem;
+	margin-bottom: 3rem;
+}
+
+.TextHeading span {
+	color: var(--color-blue);
+}
+
+.Header p {
+	font-size: 2rem;
+	width: 70%;
+	color: teal;
+}
+
+.Overlay {
+	position: absolute;
+	height: 100vh;
+	background-color: #000;
+	width: 100%;
+	z-index: -1;
+}
+
+@media only screen and (max-width: 375px) {
+	.Header {
+		flex-direction: column;
+		height: 50vh;
+	}
+
+	.HeaderText {
+		margin-right: 0;
+		transform: translateY(30%);
+		flex: 0.75;
+	}
+
+	.IconsContainer {
+		display: none;
+	}
+
+	.TextHeading {
+		font-size: 6rem;
+		line-height: 5.5rem;
+		width: 40%;
+	}
+
+	.Header p {
+		font-size: 1.8rem;
+	}
+}
